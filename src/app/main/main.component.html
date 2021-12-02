@@ -1,0 +1,42 @@
+<div *ngIf="showLoader">
+    <mat-progress-spinner></mat-progress-spinner>
+</div>
+<h1>Welcome to the list</h1>
+<nav class="navbar">
+    <label>Search tournament :</label>
+    <input  class="searchKey" type="search" placeholder="Search Title" [(ngModel)]="searchKey" (ngModelChange)="Search()">
+    <div class="form-group">
+        <strong>Category </strong> :
+        <select class="form-control" aria-label="select" [(ngModel)]="friend">
+        <option value="">All</option>
+        <option value="0">magics</option>
+        <option value="3">thirds</option>
+        <option value="5">fifths</option>
+    </select>
+</div> 
+<button id="kolt" (click)="reset()"><span class="material-icons">
+    restart_alt
+    </span></button> 
+</nav>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>UserId</th>
+            <th>body</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let post of posts | magic: friend">
+            <td>{{post.id}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.userId}}</td>
+            <td>{{post.body}}</td>
+            <td><button (click)="removeItem(post.id)"><span class="material-icons">
+                delete_outline
+                </span></button></td>
+        </tr>
+    </tbody>
+</table>

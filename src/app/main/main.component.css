@@ -1,0 +1,39 @@
+h1 {
+  text-align: center;
+}
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 100%;
+}
+thead {
+    background-color: #110404;
+    color: white;
+}
+tbody {
+    background-color: blanchedalmond;
+}
+td {
+    border: 1px solid #f5efef;
+    text-align: center;
+}
+
+td:hover {
+    color:blue;
+}
+tr:active {
+    background-color: #f1ebeb;
+}
+tr:hover {
+    background-color: #f1ebeb;
+}
+nav {
+    display: flex;
+    margin-bottom: 20px;
+}
+div{
+    margin-left: 20px;
+}
+#kolt {
+    margin-left: 20px;
+}
