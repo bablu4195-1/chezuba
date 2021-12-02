@@ -14,8 +14,7 @@
         <option value="3">thirds</option>
         <option value="5">fifths</option>
     </select>
-         <span>Reset:</span>
-        <button id="kolt" (click)="reset()">R<span class="material-icons">restart_alt</span></button> 
+        <button id="kolt" (click)="reset()">Reset</button> 
 </div> 
 </nav>
 </mat-toolbar>
@@ -35,7 +34,7 @@
             <td>{{post.title}}</td>
             <td>{{post.userId}}</td>
             <td>{{post.body}}</td>
-            <td><button id="kolmo" (click)="removeItem(post.id)">D<span class="material-icons">
+            <td><button id="kolmo" (click)="removeItem(post.id)"><span class="material-icons">
                 delete_outline
                 </span></button></td>
         </tr>
