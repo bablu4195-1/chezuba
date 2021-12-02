@@ -27,13 +27,35 @@ tr:active {
 tr:hover {
     background-color: #f1ebeb;
 }
-nav {
-    display: flex;
-    margin-bottom: 20px;
-}
-div{
+
+#classio{
     margin-left: 20px;
+    align-self: center;
 }
 #kolt {
-    margin-left: 20px;
+    margin-left: 10px;
+    
+}
+mat-toolbar {
+    background-color: black;
+    color: white;
+}
+#kolmo {
+    display: flex;
+    align-self: baseline;
+}
+span {
+    margin-left: 10px;
+}
+.navbar{
+  display: flex;
+}
+thead {
+    border-top: 1px solid #f5efef;
+}
+input {
+    border-radius: 10%;
+}
+label {
+    align-self: center;
 }

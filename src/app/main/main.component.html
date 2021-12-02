@@ -2,22 +2,23 @@
     <mat-progress-spinner></mat-progress-spinner>
 </div>
 <h1>Welcome to the list</h1>
+<mat-toolbar >
 <nav class="navbar">
-    <label>Search tournament :</label>
+    <label>Search List :</label>
     <input  class="searchKey" type="search" placeholder="Search Title" [(ngModel)]="searchKey" (ngModelChange)="Search()">
-    <div class="form-group">
+    <div id="classio" class="form-group">
         <strong>Category </strong> :
         <select class="form-control" aria-label="select" [(ngModel)]="friend">
-        <option value="">All</option>
+        <option value="" [defaultSelected]>All</option>
         <option value="0">magics</option>
         <option value="3">thirds</option>
         <option value="5">fifths</option>
     </select>
+         <span>Reset:</span>
+        <button id="kolt" (click)="reset()">R<span class="material-icons">restart_alt</span></button> 
 </div> 
-<button id="kolt" (click)="reset()"><span class="material-icons">
-    restart_alt
-    </span></button> 
 </nav>
+</mat-toolbar>
 <table>
     <thead>
         <tr>
@@ -34,7 +35,7 @@
             <td>{{post.title}}</td>
             <td>{{post.userId}}</td>
             <td>{{post.body}}</td>
-            <td><button (click)="removeItem(post.id)"><span class="material-icons">
+            <td><button id="kolmo" (click)="removeItem(post.id)">D<span class="material-icons">
                 delete_outline
                 </span></button></td>
         </tr>
